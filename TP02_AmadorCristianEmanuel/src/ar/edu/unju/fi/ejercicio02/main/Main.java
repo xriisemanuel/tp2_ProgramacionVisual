@@ -155,9 +155,9 @@ public class Main {
 	
 	public static void deletEfemeride(ArrayList<Efemeride> efemerides) {
 		ArrayList<Efemeride> aux = new ArrayList<>();
-		boolean change = false;
 		
 		Scanner s = new Scanner(System.in);
+		boolean exist = false;
 		
 		System.out.println("Eliminar Edemeride - codigos disponibles");
 		for (Efemeride e: efemerides) {
@@ -172,21 +172,20 @@ public class Main {
 				if (!e.getCode().equals(x)) {
 					aux.add(e);
 				} else {
-					change = true;
+					exist = true;
 				}
 			}
+			if (exist) {
+				efemerides.removeAll(efemerides);
+				efemerides.addAll(aux);
+				System.out.println("Eliminacion exitosa");
+			} else {
+				System.out.println("No existe el codigo ingresado");
+			}
+			
 		} else {
 			System.out.println("No hay Efemerides registradas aun");
 		}
-		
-		if (!change) {
-			efemerides.removeAll(efemerides);
-			efemerides.addAll(aux);
-			
-		} else {
-			System.out.println("Efemeride eliminada");
-		}
-	
 	}
 	
 	public static void modifyEfemeride(ArrayList<Efemeride> efemerides) {
