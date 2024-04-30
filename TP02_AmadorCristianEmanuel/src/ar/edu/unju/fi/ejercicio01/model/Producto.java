@@ -7,9 +7,10 @@ public class Producto {
 	private float price;
 	private MadeIn madeIn;
 	private Category cat;
-	
-	public Producto() {}
-	
+
+	public Producto() {
+	}
+
 	public Producto(String code, String desc, float price, MadeIn madeIn, Category cat) {
 		this.code = code;
 		this.desc = desc;
@@ -17,8 +18,7 @@ public class Producto {
 		this.madeIn = madeIn;
 		this.cat = cat;
 	}
-	
-	
+
 	public String getCode() {
 		return code;
 	}
@@ -59,20 +59,18 @@ public class Producto {
 		this.cat = cat;
 	}
 
-
 	public enum MadeIn {
 		ARGENTINA, CHINA, BRASIL, URUGUAY
 	}
-	
+
 	public enum Category {
 		TELEFONIA, INFORMATICA, ELECTROHOGAR, HERRAMIENTAS
 	}
 
 	@Override
 	public String toString() {
-		return "Producto [code=" + code + ", desc=" + desc + ", price=" + price + ", madeIn=" + madeIn + ", cat=" + cat
-				+ "]";
+		return "\n\"Detalles\" \nCodigo: " + code + "\nDescripcion: " + desc + "\nPrecio: " + price + "\nFabricado en: "
+				+ madeIn + "\nCategoria: " + cat;
 	}
-	
-	
+
 }
