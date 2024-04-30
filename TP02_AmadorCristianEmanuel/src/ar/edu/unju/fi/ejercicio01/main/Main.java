@@ -174,7 +174,6 @@ public class Main {
 
 		products.add(p);
 		System.out.println("Nuevo Producto Registrado Exitosamente");
-		// p.toString();
 	}
 
 	public static void modify(Producto p) {
@@ -228,7 +227,6 @@ public class Main {
 
 		boolean exists = false;
 		if (products.size() != 0) {
-			int pos;
 
 			for (Producto x : products) {
 				System.out.print("[" + x.getCode() + "] ");
@@ -245,7 +243,7 @@ public class Main {
 					break;
 				}
 			}
-			
+
 			if (!exists) {
 				System.err.println("No Existe El Codigo Ingresado");
 			} else {
