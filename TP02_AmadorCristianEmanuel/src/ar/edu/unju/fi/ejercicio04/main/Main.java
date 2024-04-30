@@ -1,12 +1,10 @@
 package ar.edu.unju.fi.ejercicio04.main;
 
-import java.sql.Date;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
 
-import ar.edu.unju.fi.ejercicio01.model.Producto;
 import ar.edu.unju.fi.ejercicio04.constantes.Posicion;
 import ar.edu.unju.fi.ejercicio04.model.Jugador;
 
@@ -15,13 +13,6 @@ public class Main {
 	public static float f;
 
 	public static void main(String[] args) {
-		/*
-		 * 1 – Alta de jugador 2 – Mostrar todos los jugadores. 3 – Modificar la
-		 * posición de un jugador (el usuario debe ingresar el nombre y el apellido del
-		 * jugador) 4 – Eliminar un jugador (el usuario debe ingresar el nombre y
-		 * apellido. Utilice Iterator). 5 – Salir.
-		 */
-
 		ArrayList<Jugador> gamers = new ArrayList<>();
 		Scanner sc = new Scanner(System.in);
 
