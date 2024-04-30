@@ -38,7 +38,7 @@ public class Main {
 					modifyEfemeride(efemerides);
 					break;
 				case 5:
-					System.out.println("program sttoped");
+					System.err.println("program sttoped");
 					exit = false;
 					break;
 				default:
