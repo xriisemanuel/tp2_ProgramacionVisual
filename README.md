@@ -1,2 +1,2 @@
-# tp2_ProgramacionVisual
-Trabajo Practico Nro 2 de Programación Visual - UNJu
+# tp2_ProgramacionVisual <con errores de fusion adecuada hacia el brench principal>
+Enlace al repositorio Completo: https://github.com/xriisemanuel/tp2_Programacion_Visual.git
