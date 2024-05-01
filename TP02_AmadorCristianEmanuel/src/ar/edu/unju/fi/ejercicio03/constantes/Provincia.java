@@ -13,7 +13,7 @@ public enum Provincia {
 		this.superficie = superficie;
 	}
 
-	// only getter can be created on "enum" classes.
+	// only getter can be created on "enum" classes
 	public int getPoblacion() {
 		return poblacion;
 	}
