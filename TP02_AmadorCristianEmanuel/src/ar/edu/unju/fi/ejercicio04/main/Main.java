@@ -210,6 +210,7 @@ public class Main {
 	}
 
 	public static void delete(ArrayList<Jugador> gamers) {
+		
 		Iterator<Jugador> iterador = gamers.iterator();
 		Jugador aux = new Jugador();
 		checkString("nombre");
