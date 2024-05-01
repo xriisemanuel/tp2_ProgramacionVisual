@@ -7,12 +7,12 @@ import ar.edu.unju.fi.ejercicio02.constantes.Mes;
 import ar.edu.unju.fi.ejercicio02.model.Efemeride;
 
 public class Main {
+	public static Scanner sc = new Scanner(System.in);
 	public static String x;
 
 	public static void main(String[] args) {
 
 		ArrayList<Efemeride> efemerides = new ArrayList<>();
-		Scanner sc = new Scanner(System.in);
 
 		int o;
 		boolean exit = true;
@@ -64,29 +64,25 @@ public class Main {
 	}
 
 	public static void checkString(String s) {
-
-		Scanner scanner = new Scanner(System.in);
 		boolean loop = true;
 
 		do {
 			try {
 				System.out.println("Ingrese " + s + ": ");
-				x = scanner.next();
-				if (x.matches("[a-zA-Z]+")) {
+				x = sc.next();
+				if (x.matches("[a-zA-Z0-9]+")) {
 					loop = false;
 				} else {
 					System.out.println("Ingrese " + s + " Alfanumerico");
 				}
 			} catch (Exception e) {
 				System.out.println("Solo debe ingresar caracteres alfanumericos");
-				scanner.nextLine();
+				sc.nextLine();
 			}
-
 		} while (loop);
 	}
 
 	public static void selectMonth(Efemeride e) {
-		Scanner sca = new Scanner(System.in);
 		boolean loop = true;
 
 		Mes[] months = Mes.values();
@@ -98,23 +94,22 @@ public class Main {
 
 			try {
 				System.out.println("Ingrese el numero correspondiente al MES: ");
-				int n = sca.nextInt();
+				int n = sc.nextInt();
 				if (n > 0 && n <= months.length) {
 					e.setMonth(months[n - 1]);
 					loop = false;
 				} else {
-					System.err.println("Numero Invalido, intente nuevamente");
+					System.out.println("Numero Invalido, intente nuevamente");
 				}
 			} catch (Exception wrong) {
 				System.err.println("Debe ingresar solo valores numericos");
-				sca.nextLine();
+				sc.nextLine();
 			}
 		} while (loop);
 
 	}
 
 	public static void checkDay(Efemeride e) {
-		Scanner s = new Scanner(System.in);
 		int day;
 		boolean loop = true;
 
@@ -122,7 +117,7 @@ public class Main {
 			System.out.println("Ingrese un dia entre 1 y 31");
 
 			try {
-				day = s.nextInt();
+				day = sc.nextInt();
 
 				if (day > 0 && day < 32) {
 					e.setDay(day);
@@ -132,8 +127,8 @@ public class Main {
 				}
 
 			} catch (Exception wrong) {
-				System.out.println("Ingrese solo valores numericos entre 1 - 31");
-				s.nextLine();
+				System.err.println("Ingrese solo valores numericos entre 1 - 31");
+				sc.nextLine();
 			}
 		} while (loop);
 	}
@@ -152,23 +147,21 @@ public class Main {
 		efemerides.add(e);
 		System.out.println("Nueva Efemeride Registrada Exitosamente");
 	}
-	
+
 	public static void deletEfemeride(ArrayList<Efemeride> efemerides) {
 		ArrayList<Efemeride> aux = new ArrayList<>();
-		
-		Scanner s = new Scanner(System.in);
 		boolean exist = false;
-		
+
 		System.out.println("Eliminar Edemeride - codigos disponibles");
-		for (Efemeride e: efemerides) {
+		for (Efemeride e : efemerides) {
 			System.out.print(e.getCode() + " ");
 		}
 		System.out.println();
-		
+
 		checkString("Codigo");
-		
+
 		if (efemerides.size() != 0) {
-			for (Efemeride e: efemerides) {
+			for (Efemeride e : efemerides) {
 				if (!e.getCode().equals(x)) {
 					aux.add(e);
 				} else {
@@ -182,34 +175,32 @@ public class Main {
 			} else {
 				System.out.println("No existe el codigo ingresado");
 			}
-			
+
 		} else {
 			System.out.println("No hay Efemerides registradas aun");
 		}
 	}
-	
+
 	public static void modifyEfemeride(ArrayList<Efemeride> efemerides) {
 		boolean change = false;
-		
-		Scanner s = new Scanner(System.in);
-		
+
 		System.out.println("Modificar Edemeride - codigos disponibles");
-		for (Efemeride e: efemerides) {
+		for (Efemeride e : efemerides) {
 			System.out.print(e.getCode() + " ");
 		}
 		System.out.println();
-		
+
 		checkString("Codigo");
-		
+
 		if (efemerides.size() != 0) {
-			for (Efemeride e: efemerides) {
+			for (Efemeride e : efemerides) {
 				if (e.getCode().equals(x)) {
 					selectMonth(e);
 					change = true;
 				}
 			}
 		}
-		
+
 		if (change) {
 			System.out.println("Modificacion del MES Exitoso");
 		} else {
