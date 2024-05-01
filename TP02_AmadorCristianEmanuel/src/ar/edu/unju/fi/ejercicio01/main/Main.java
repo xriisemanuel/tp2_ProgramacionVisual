@@ -12,7 +12,6 @@ public class Main {
 	public static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		
 		int o = 0;
 		ArrayList<Producto> products = new ArrayList<Producto>();
 
