@@ -7,7 +7,6 @@ public enum Provincia {
 
 	private final int poblacion;
 	private final int superficie;
-
 	private Provincia(int poblacion, int superficie) {
 		this.poblacion = poblacion;
 		this.superficie = superficie;

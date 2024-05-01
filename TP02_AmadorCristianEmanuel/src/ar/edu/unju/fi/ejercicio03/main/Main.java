@@ -5,7 +5,6 @@ import ar.edu.unju.fi.ejercicio03.constantes.Provincia;
 public class Main {
 
 	public static void main(String[] args) {
-
 		Provincia[] provincias = Provincia.values();
 
 		showAll(provincias);
