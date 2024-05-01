@@ -11,9 +11,7 @@ public class Main {
 	public static String x;
 
 	public static void main(String[] args) {
-
 		ArrayList<Efemeride> efemerides = new ArrayList<>();
-
 		int o;
 		boolean exit = true;
 
