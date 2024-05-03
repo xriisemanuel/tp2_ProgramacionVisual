@@ -1,2 +1,2 @@
-# tp2_ProgramacionVisual <con errores de fusion adecuada hacia el brench principal>
+# tp2_ProgramacionVisual fallido -> a continuacion el enlace OFICIAL
 Enlace al repositorio Completo: https://github.com/xriisemanuel/tp2_Programacion_Visual.git
